@@ -1,7 +1,9 @@
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useMediaQuery } from "react-responsive"
 
+gsap.registerPlugin(ScrollTrigger)
 const Highlights = () => {
 
   const isMobile = useMediaQuery({ query: '(max-width: 1024px)'})
@@ -24,8 +26,7 @@ const Highlights = () => {
   return (
     <section id="highlights">
       <h2>There's never been a better time to upgrade.</h2>
-      <h3>Here's what you get with the new MacBook Prp.</h3>
-
+      <h3>Here's what you get with the new MacBook Pro.</h3>
       <div className="masonry">
         <div className="left-column">
           <div>
