@@ -1,5 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 import { useMediaQuery } from "react-responsive";
 
 const Showcase = () => {
@@ -10,7 +11,7 @@ const Showcase = () => {
             const timeline = gsap.timeline({
                 scrollTrigger: {
                     trigger: '#showcase',
-                    start: 'top top',
+                    start: 'top top+=266',
                     end: 'bottom top',
                     scrub: true,
                     pin: true,
