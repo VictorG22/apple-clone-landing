@@ -11,7 +11,7 @@ const Showcase = () => {
             const timeline = gsap.timeline({
                 scrollTrigger: {
                     trigger: '#showcase',
-                    start: 'top top+=266',
+                    start: 'top top',
                     end: 'bottom top',
                     scrub: true,
                     pin: true,
@@ -22,9 +22,6 @@ const Showcase = () => {
                 scale: 1.1
             }).to('.content', {opacity: 1, y: 0, ease: 'power1.in'})
 
-            return () => {
-                timeline.kill();
-            };
         }
   }, [isTablet]);
 
